@@ -1,0 +1,28 @@
+{
+  "name": "apitesting",
+  "version": "1.0.0",
+  "description": "this is a Workshop about APi Testing in JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/afranco7/psl-workshop-api-testing-js.git"
+  },
+  "keywords": [
+    "api-testing",
+    "dojo",
+    "practice"
+  ],
+  "author": "Alejandro Franco - afranco7@gmail.com afranco7",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/afranco7/psl-workshop-api-testing-js/issues"
+  },
+  "homepage": "https://github.com/afranco7/psl-workshop-api-testing-js#readme",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^3.5.3"
+  }
+}
