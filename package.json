@@ -4,7 +4,7 @@
   "description": "this is a Workshop about APi Testing in JavaScript",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha -t 5000"
   },
   "repository": {
     "type": "git",
@@ -29,5 +29,6 @@
   "dependencies": {
     "superagent": "^3.6.0",
     "superagent-promise": "^1.1.0"
-  }
+  }  
 }
+
