@@ -8,94 +8,92 @@ describe('First Api Tests', () => {
 });
 
 it('Consume GET Service', () => {
-    return agent.get('https://httpbin.org/ip').then((response) => {
-      expect(response.status).to.equal(statusCode.OK);
-      expect(response.body).to.have.property('origin');
-    });
+  return agent.get('https://httpbin.org/ip').then((response) => {
+    expect(response.status).to.equal(statusCode.OK);
+    expect(response.body).to.have.property('origin');
   });
+});
 
-  
 it('Consume GET Service with query parameters', () => {
-    const query = {
+  const query = {
       name: 'John',
       age: '31',
       city: 'New York'
-    };
- 
-    return agent.get('https://httpbin.org/get')
+  };
+  return agent.get('https://httpbin.org/get')
       .query(query)
       .then((response) => {
         expect(response.status).to.equal(statusCode.OK);
         expect(response.body.args).to.eql(query);
       });
-  });
- 
-  it('Consume POST Service', () => {
-    const body = {
+});
+
+it('Consume POST Service', () => {
+  const body = {
       name: 'John',
       age: 31,
       city: 'New York'
-    };
- 
-    return agent
+  };
+
+  return agent
       .post('https://httpbin.org/post')
       .send(body)
       .then((response) => {
         expect(response.status).to.equal(statusCode.OK);
         expect(response.body.json).to.eql(body);
       });
-  });
+});
 
-  it('Consume PUT Service', () => {
-    const body = {
+it('Consume PUT Service', () => {
+  const body = {
       name: 'alejandro',
       age: 31,
       city: 'New York'
-    };
- 
-    return agent
+  };
+
+  return agent
       .put('https://httpbin.org/put')
       .send(body)
       .then((response) => {
         expect(response.status).to.equal(statusCode.OK);
         expect(response.body.json).to.eql(body);
       });
-  });
+});
 
-  it('Consume PATCH Service', () => {
-    const body = {
+it('Consume PATCH Service', () => {
+  const body = {
       name: 'John',
       age: 31,
       city: 'Los angeles'
-    };
- 
-    return agent
+  };
+
+  return agent
       .patch('https://httpbin.org/patch')
       .send(body)
       .then((response) => {
         expect(response.status).to.equal(statusCode.OK);
         expect(response.body.json).to.eql(body);
       });
-  });
+});
 
-  it('Consume HEAD Service', () => {
-    return agent.head('https://httpbin.org/ip').then((response) => {
-      expect(response.status).to.equal(statusCode.OK);      
-    });
+it('Consume HEAD Service', () => {
+  return agent.head('https://httpbin.org/ip').then((response) => {
+    expect(response.status).to.equal(statusCode.OK);      
   });
+});
 
-  it('Consume DELETE Service', () => {
-    const body = {
+it('Consume DELETE Service', () => {
+  const body = {
       name: 'John',
       age: 31,
       city: 'New York'
-    };
- 
-    return agent
+  };
+
+  return agent
       .del('https://httpbin.org/delete')
       .send(body)
       .then((response) => {
         expect(response.status).to.equal(statusCode.OK);
         expect(response.body.json).to.eql(body);
       });
-  });
+});
