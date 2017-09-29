@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "This is a Workshop about Api Testing in JavaScript",
   "main": "index.js",
- "scripts": {
+  "scripts": {
     "lint": "eslint ./test/**/*.js",
     "test": "mocha -t 5000 --reporter mochawesome --reporter-options reportDir=report,reportFilename=ApiTesting"
   },
