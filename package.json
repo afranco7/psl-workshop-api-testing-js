@@ -1,7 +1,7 @@
 {
   "name": "apitesting",
   "version": "1.0.0",
-  "description": "this is a Workshop about APi Testing in JavaScript",
+  "description": "This is a Workshop about Api Testing in JavaScript",
   "main": "index.js",
   "scripts": {
     "lint": "eslint ./test/**/*.js",
