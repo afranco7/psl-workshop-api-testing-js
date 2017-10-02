@@ -16,7 +16,6 @@ describe('Github Api Test', () => {
           expect(response.body.description).equal('This is a Workshop about Api Testing in JavaScript');
         }));
   });
-});
 
 it('Via OAuth2 Tokens by parameter', () =>
   agent.get(`${urlBase}/repos/${githubUserName}/${repository}`)
@@ -25,3 +24,4 @@ it('Via OAuth2 Tokens by parameter', () =>
       expect(response.status).to.equal(statusCode.OK);
       expect(response.body.description).equal('This is a Workshop about Api Testing in JavaScript');
     }));
+});
